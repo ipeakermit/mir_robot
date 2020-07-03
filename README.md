@@ -1,3 +1,21 @@
+mir_driver for VXLab@RMIT
+=========================
+
+This is a fork of repository https://github.com/dfki-ric/mir_robot experimenting with spawning a mir100 in the VXLab sim at https://github.com/ipeakermit/baxter-mobility-base-simdemo.
+
+Proper documentation is required. Roughly:
+
+Elsewhere, start up the VXLab sim (baxter-mobility-base-simdemo linked above), start it, then run
+./blue-minimal
+
+docker-compose build
+docker-compose up -d
+docker exec -it vxlab-blue bash
+cd ~/mir100
+./rosie-and-blue
+./localization
+./navigation
+
 mir_driver
 ==========
 
