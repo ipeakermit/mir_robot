@@ -1,7 +1,9 @@
-mir_driver for VXLab@RMIT
-=========================
+mir_driver for VXLab@RMIT Sim
+=============================
 
-This is a fork of repository https://github.com/dfki-ric/mir_robot experimenting with spawning a mir100 in the VXLab sim at https://github.com/ipeakermit/baxter-mobility-base-simdemo.
+This is a fork of https://github.com/dfki-ric/mir_robot,
+spawning a mir100 in the VXLab sim
+https://github.com/ipeakermit/baxter-mobility-base-simdemo.
 
 Proper documentation is required. Roughly:
 
