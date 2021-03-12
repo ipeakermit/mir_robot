@@ -22,7 +22,7 @@ COPY . /ws/src/mir_robot
 WORKDIR /ws
 
 # Use rosdep to install all dependencies (including ROS itself)
-RUN rosdep install --from-paths src -i -y --rosdistro melodic
+RUN apt update && rosdep install --from-paths src -i -y --rosdistro melodic
 
 # Why is this not installed already?!
 RUN apt update && apt install -y \
@@ -33,8 +33,12 @@ RUN /bin/bash -c "source /opt/ros/melodic/setup.bash && \
     catkin config --install -j 1 -p 1 && \
     catkin_make"
 
+RUN echo 'source ~/rosie/rosenv.blue.bash' >> /root/.bashrc
+
 #RUN /bin/bash -c "source /opt/ros/melodic/setup.bash && \
 #    catkin init && \
 #    catkin config --install -j 1 -p 1 && \
 #    catkin build --limit-status-rate 0.1 --no-notify && \
 #    catkin build --limit-status-rate 0.1 --no-notify --make-args tests"
+
+WORKDIR /root/mir100
